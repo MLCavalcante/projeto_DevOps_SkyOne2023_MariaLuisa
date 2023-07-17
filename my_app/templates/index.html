@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas vindas!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            margin: 0;
+        }
+        
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .preloader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+        
+        .hero {
+            background-image: linear-gradient(to bottom right, #14213d, #000000);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        .hero.fade-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        
+        .hero .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        
+        .hero .btn-container .btn {
+            font-size: 18px;
+            padding: 12px 24px;
+            border-radius: 4px;
+            margin: 0 10px;
+        }
+        
+        .hero .btn-container .btn i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader fade-out"></div>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="display-4">Bem Vindo!</h1>
+                    <p class="lead">Obrigada pela oportunidade e pela experiência, Sky.One!</p>
+                    <div class="btn-container">
+                        <a href="https://www.linkedin.com/in/maria-lu%C3%ADsa-cavalcante-23ba82275/" class="btn btn-primary">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/mlcavalcante" class="btn btn-secondary">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $(".preloader").fadeOut("slow");
+        });
+        
+        $(document).ready(function() {
+            $(".hero").addClass("fade-in");
+        });
+    </script>
+</body>
+</html>
